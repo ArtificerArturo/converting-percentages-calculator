@@ -1,0 +1,169 @@
+#percentAsDecimal {
+   max-width: 440px;
+   margin: 0 auto;
+   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 18px;
+}
+
+#percentAsDecimal .title {
+   font-size: 16px;
+   color: #7f7f7f;
+}
+
+#percentAsDecimal .background {
+   background-color: #fafafa;
+   padding: 20px;
+   border: solid 1px #cbcbcb;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   margin-bottom: 20px;
+}
+#percentAsDecimal input {
+   padding: 10px;
+   background-color: white;
+   border: solid 1px #cbcbcb;
+   width: 60px;
+}
+
+#percentAsDecimal .calculatorGuts {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+}
+
+#decimalAsPercent {
+   max-width: 440px;
+   margin: 0 auto;
+   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 18px;
+}
+
+#decimalAsPercent .title {
+   font-size: 16px;
+   color: #7f7f7f;
+}
+
+#decimalAsPercent .background {
+   background-color: #fafafa;
+   padding: 20px;
+   border: solid 1px #cbcbcb;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   margin-bottom: 20px;
+}
+#decimalAsPercent input {
+   padding: 10px;
+   background-color: white;
+   border: solid 1px #cbcbcb;
+   width: 60px;
+}
+
+#decimalAsPercent .calculatorGuts {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+}
+
+#percentAsFraction {
+   max-width: 440px;
+   margin: 0 auto;
+   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 18px;
+}
+
+#percentAsFraction .title {
+   font-size: 16px;
+   color: #7f7f7f;
+}
+
+#percentAsFraction .background {
+   background-color: #fafafa;
+   padding: 20px;
+   border: solid 1px #cbcbcb;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   margin-bottom: 20px;
+}
+#percentAsFraction input {
+   padding: 10px;
+   background-color: white;
+   border: solid 1px #cbcbcb;
+   width: 60px;
+}
+
+#percentAsFraction .calculatorGuts {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+}
+#fractionAsPercent {
+   max-width: 440px;
+   margin: 0 auto;
+   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 18px;
+}
+
+#fractionAsPercent .title {
+   font-size: 16px;
+   color: #7f7f7f;
+}
+
+#fractionAsPercent .background {
+   background-color: #fafafa;
+   padding: 20px;
+   border: solid 1px #cbcbcb;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   margin-bottom: 20px;
+}
+#fractionAsPercent input {
+   padding: 10px;
+   background-color: white;
+   border: solid 1px #cbcbcb;
+   width: 60px;
+}
+
+#fractionAsPercent .fractionBar {
+   border: 1px solid #3a3a3a;
+}
+
+#fractionAsPercent .fractionStack {
+   display: flex;
+   flex-direction: column;
+   gap: 3px;
+}
+
+#fractionAsPercent .calculatorGuts {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+}
+/* do not bring to wordpress below this line */
+#fractionAsPercent a {
+   text-decoration: underline;
+   color: #000;
+   transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+   text-align: center;
+   font-size: 90%;
+}
+
+#fractionAsPercent a:hover {
+   text-decoration-color: #fc0;
+   -webkit-text-fill-color: #000;
+   -webkit-text-stroke-width: 0.5px;
+   -webkit-text-stroke-color: #000;
+   transition-timing-function: ease;
+   transition-duration: 3s;
+}

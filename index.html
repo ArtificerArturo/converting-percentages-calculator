@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Converting Percentages Calculators</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+
+   <body>
+      <script src="script.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+      <div class="calculatorcontainer" id="percentAsDecimal">
+         <div class="title">Converting a Percentage to a Decimal</div>
+         <div class="background">
+            <div class="calculatorGuts">
+               <div>What is</div>
+               <div class="input">
+                  <input onkeyup="convertPercentToDecimal()" id="percentInput" type="number" />
+               </div>
+               <div>% as a decimal?</div>
+            </div>
+         </div>
+      </div>
+      <div class="calculatorcontainer" id="decimalAsPercent">
+         <div class="title">Converting a Decimal to a Percentage</div>
+         <div class="background">
+            <div class="calculatorGuts">
+               <div>What is</div>
+               <div class="input">
+                  <input onkeyup="convertDecimalToPercent()" id="wholeInput" type="number" />
+               </div>
+               <div>.</div>
+               <div class="input">
+                  <input onkeyup="convertDecimalToPercent()" id="decimalInput" type="number" />
+               </div>
+               <div>as a percentage?</div>
+            </div>
+         </div>
+      </div>
+      <div class="calculatorcontainer" id="percentAsFraction">
+         <div class="title">Converting a Percentage to a Fraction</div>
+         <div class="background">
+            <div class="calculatorGuts">
+               <div>What is</div>
+               <div class="input">
+                  <input onkeyup="convertPercentToFraction()" id="percentInput" type="number" />
+               </div>
+
+               <div>% as a fraction?</div>
+            </div>
+         </div>
+      </div>
+      <div class="calculatorcontainer" id="fractionAsPercent">
+         <div class="title">Converting a Fraction to a Percentage</div>
+         <div class="background">
+            <div class="calculatorGuts">
+               <div>What is</div>
+               <div class="fractionStack">
+                  <div><input onkeyup="convertFractionToPercent()" id="numerator" type="number" /></div>
+                  <div class="fractionBar"></div>
+                  <div><input onkeyup="convertFractionToPercent()" id="denominator" type="number" /></div>
+               </div>
+               <div>as a percentage?</div>
+            </div>
+         </div>
+         <div id="bugLink" style="text-align: center; margin-bottom: 20px; font-size: 90%">
+            Found a bug?
+            <a
+               class="ylist"
+               href="https://airtable.com/appR7FfpamrmFpTmL/pagGUR4cIuGPtr6cm/form?prefill_Calculator=PercentCalculator&amp;hide_Calculator=true"
+               target="_blank"
+               rel="noopener"
+               >Let us know!</a
+            >
+         </div>
+      </div>
+   </body>
+</html>
