@@ -103,36 +103,44 @@ function convertFractionToPercent() {
    const denominatorInput = document.querySelector("#fractionAsPercent #denominator")
    const backgroundElement = document.querySelector("#fractionAsPercent .background")
 
+   let numerator = numeratorInput.value
+   let denominator = denominatorInput.value
+
    if (document.querySelector("#fractionAsPercent .result")) {
       document.querySelector("#fractionAsPercent .result").remove()
    }
 
-   if (denominatorInput.value == 0 || isNaN(denominatorInput.value)) return
-
-   let fraction = math.fraction(numeratorInput.value, denominatorInput.value)
-   let result = math.number(fraction) * 100
-   let fractionSign = ""
-
-   if (fraction.s == -1) fractionSign = `<mo>-</mo>`
-   else fractionSign = ""
-   if (fraction.n == 0) {
-      fractionMathML = `<mn>0</mn>`
-   } else if (fraction.n == 1 && fraction.d == 1) {
-      fractionMathML = `<mn>1</mn>`
-   } else {
-      fractionMathML = `<mfrac><mn>${fractionSign}${fraction.n}</mn><mn>${fraction.d}</mn></mfrac>`
-   }
+   if (denominator == "" || isNaN(denominator) || numerator == "" || isNaN(numerator)) return
 
    let resultElement = document.createElement("div")
    resultElement.setAttribute("class", "result")
 
+   if (!Number.isInteger(parseFloat(numerator)) || !Number.isInteger(parseFloat(denominator))) {
+      resultElement.innerHTML = "Please enter whole numbers only."
+      resultElement.style.color = "red"
+      backgroundElement.appendChild(resultElement)
+      return
+   }
+   if (denominator == 0) {
+      resultElement.innerHTML = "Please use a non-zero denominator."
+      resultElement.style.color = "red"
+      backgroundElement.appendChild(resultElement)
+      return
+   }
+
+   let fraction = math.fraction(numerator, denominator)
+   let result = math.number(fraction) * 100
+
    if (isNaN(result)) {
       resultElement.innerHTML = `Answer: <strong>Undefined</strong>.`
    } else {
-      resultElement.innerHTML = `Answer: <math>${fractionMathML}</math> is equal to <strong>${resultConditioner(
-         result
-      )}%</strong>.`
+      resultElement.innerHTML = `Answer: <math><mfrac><mn>${resultConditioner(
+         parseFloat(numerator)
+      )}</mn><mn>${resultConditioner(
+         parseFloat(denominator)
+      )}</mn></mfrac></math> is equal to <strong>${resultConditioner(result)}%</strong>.`
    }
+   resultElement.style.color = "black"
    backgroundElement.appendChild(resultElement)
    MathJax.typesetPromise()
 }
