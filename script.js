@@ -21,7 +21,7 @@ function convertPercentToDecimal() {
    } else {
       resultElement.innerHTML = `Answer: ${resultConditioner(percent)}% is equal to <strong>${resultConditioner(
          result
-      )}</strong>.`
+      )}</strong>`
    }
    backgroundElement.appendChild(resultElement)
 }
@@ -48,11 +48,11 @@ function convertDecimalToPercent() {
    resultElement.setAttribute("class", "result")
 
    if (isNaN(result)) {
-      resultElement.innerHTML = `Answer: <strong>Undefined</strong>.`
+      resultElement.innerHTML = `Answer: <strong>Undefined</strong>`
    } else {
       resultElement.innerHTML = `Answer: ${resultConditioner(
          parseFloat(completeDecimal)
-      )} is equal to <strong>${resultConditioner(result)}</strong>%.`
+      )} is equal to <strong>${resultConditioner(result)}</strong>%`
    }
    backgroundElement.appendChild(resultElement)
 }
@@ -88,11 +88,11 @@ function convertPercentToFraction() {
    }
 
    if (isNaN(result)) {
-      resultElement.innerHTML = `Answer: <strong>Undefined</strong>.`
+      resultElement.innerHTML = `Answer: <strong>Undefined</strong>`
    } else {
       resultElement.innerHTML = `Answer: ${resultConditioner(
          percent
-      )}% is equal to <strong><math>${resultMathML}</math></strong>.`
+      )}% is equal to <strong><math>${resultMathML}</math></strong>`
    }
    backgroundElement.appendChild(resultElement)
    MathJax.typesetPromise()
@@ -132,13 +132,13 @@ function convertFractionToPercent() {
    let result = math.number(fraction) * 100
 
    if (isNaN(result)) {
-      resultElement.innerHTML = `Answer: <strong>Undefined</strong>.`
+      resultElement.innerHTML = `Answer: <strong>Undefined</strong>`
    } else {
       resultElement.innerHTML = `Answer: <math><mfrac><mn>${resultConditioner(
          parseFloat(numerator)
       )}</mn><mn>${resultConditioner(
          parseFloat(denominator)
-      )}</mn></mfrac></math> is equal to <strong>${resultConditioner(result)}%</strong>.`
+      )}</mn></mfrac></math> is equal to <strong>${resultConditioner(result)}%</strong>`
    }
    resultElement.style.color = "black"
    backgroundElement.appendChild(resultElement)

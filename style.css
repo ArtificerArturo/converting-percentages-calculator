@@ -21,8 +21,8 @@
    gap: 10px;
    margin-bottom: 20px;
 }
-#percentAsDecimal input {
-   padding: 10px;
+#percentAsDecimal .calculatorGuts input {
+   padding: 0px;
    background-color: white;
    border: solid 1px #cbcbcb;
    width: 60px;
@@ -57,8 +57,8 @@
    gap: 10px;
    margin-bottom: 20px;
 }
-#decimalAsPercent input {
-   padding: 10px;
+#decimalAsPercent .calculatorGuts input {
+   padding: 0px;
    background-color: white;
    border: solid 1px #cbcbcb;
    width: 60px;
@@ -93,8 +93,8 @@
    gap: 10px;
    margin-bottom: 20px;
 }
-#percentAsFraction input {
-   padding: 10px;
+#percentAsFraction .calculatorGuts input {
+   padding: 0px;
    background-color: white;
    border: solid 1px #cbcbcb;
    width: 60px;
@@ -128,10 +128,11 @@
    gap: 10px;
    margin-bottom: 20px;
 }
-#fractionAsPercent input {
-   padding: 10px;
+#fractionAsPercent .calculatorGuts input {
+   padding: 0px;
    background-color: white;
    border: solid 1px #cbcbcb;
+   text-align: center;
    width: 60px;
 }
 
