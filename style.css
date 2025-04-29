@@ -22,16 +22,21 @@
    margin-bottom: 20px;
 }
 #percentAsDecimal .calculatorGuts input {
-   padding: 0px;
+   padding: 0px 10px;
    background-color: white;
    border: solid 1px #cbcbcb;
    width: 60px;
 }
 
+#percentAsDecimal .inputAndPercent {
+   display: flex;
+   gap: 1px;
+}
+
 #percentAsDecimal .calculatorGuts {
    display: flex;
    align-items: center;
-   gap: 4px;
+   gap: 8px;
 }
 
 #decimalAsPercent {
@@ -58,7 +63,7 @@
    margin-bottom: 20px;
 }
 #decimalAsPercent .calculatorGuts input {
-   padding: 0px;
+   padding: 0px 10px;
    background-color: white;
    border: solid 1px #cbcbcb;
    width: 60px;
@@ -67,7 +72,7 @@
 #decimalAsPercent .calculatorGuts {
    display: flex;
    align-items: center;
-   gap: 4px;
+   gap: 8px;
 }
 
 #percentAsFraction {
@@ -94,16 +99,21 @@
    margin-bottom: 20px;
 }
 #percentAsFraction .calculatorGuts input {
-   padding: 0px;
+   padding: 0px 10px;
    background-color: white;
    border: solid 1px #cbcbcb;
    width: 60px;
 }
 
+#percentAsFraction .inputAndPercent {
+   display: flex;
+   gap: 1px;
+}
+
 #percentAsFraction .calculatorGuts {
    display: flex;
    align-items: center;
-   gap: 4px;
+   gap: 8px;
 }
 #fractionAsPercent {
    max-width: 440px;
@@ -149,7 +159,7 @@
 #fractionAsPercent .calculatorGuts {
    display: flex;
    align-items: center;
-   gap: 4px;
+   gap: 8px;
 }
 /* do not bring to wordpress below this line */
 #fractionAsPercent a {

@@ -28,21 +28,18 @@ function convertPercentToDecimal() {
 
 function convertDecimalToPercent() {
    const wholeInput = document.querySelector("#decimalAsPercent #wholeInput")
-   const decimalInput = document.querySelector("#decimalAsPercent #decimalInput")
    const backgroundElement = document.querySelector("#decimalAsPercent .background")
 
-   let whole = wholeInput.value
-   let decimal = decimalInput.value
+   let whole = parseFloat(wholeInput.value)
    let result = 0
 
    if (document.querySelector("#decimalAsPercent .result")) {
       document.querySelector("#decimalAsPercent .result").remove()
    }
 
-   if (whole == "" && decimal == "") return
+   if (isNaN(whole)) return
 
-   let completeDecimal = whole.concat(".", decimal)
-   result = parseFloat(completeDecimal) * 100
+   result = whole * 100
 
    let resultElement = document.createElement("div")
    resultElement.setAttribute("class", "result")
@@ -51,7 +48,7 @@ function convertDecimalToPercent() {
       resultElement.innerHTML = `Answer: <strong>Undefined</strong>`
    } else {
       resultElement.innerHTML = `Answer: ${resultConditioner(
-         parseFloat(completeDecimal)
+         parseFloat(whole)
       )} is equal to <strong>${resultConditioner(result)}</strong>%`
    }
    backgroundElement.appendChild(resultElement)
